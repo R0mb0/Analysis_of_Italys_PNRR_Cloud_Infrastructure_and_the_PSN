@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage[pdftex]{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[many]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{appendix}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{authblk}
+
+\usepackage{minted} % Pacchetto per evidenziare la sintassi
+\usepackage{tcolorbox} % Per riquadri personalizzabili
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % o una versione compatibile con la tua TeX
+
+\usepackage{caption}
+
+% Configurazione globale per minted: riquadro, numeri di riga, font più piccolo e spezzatura aggressiva
+\setminted{
+	frame=single,
+	linenos,
+	fontsize=\footnotesize, % o \scriptsize se vuoi ancora più margine
+	breaklines,
+	breakanywhere,
+	numbersep=4pt,      % distanza tra numeri di riga e codice
+	xleftmargin=6pt,    % margine sinistro interno al frame
+	framesep=2pt        % distanza testo-bordo
+}
+
+\usepackage{csquotes} % consigliato con biblatex
+\usepackage{biblatex}
+\addbibresource{riferimenti.bib}
+
+\title{\color{FireBrick}\bf{Realizzazione di una applicazione OCR per manoscritti italiani mediante Kraken}}
+\author[1]{\color{FireBrick}\bf{Francesco Rombaldoni}}
+\affil[1]{f.rombaldoni@campus.uniurb.it}
+
+\date{}
+
+\begin{document}
+	\fancypagestyle{firstpage}
+	{
+		\fancyhead[L]{\footnotesize{\bf{Universit\`a degli Studi di Urbino Carlo Bo}}}
+		\fancyhead[R]{\footnotesize{\bf{CdL Magistrale Informatica e Innovazione Digitale}}}
+	}
+	\thispagestyle{firstpage}
+	
+	\pagestyle{fancy}
+	
+	\fancyhead{} % clear all header fields
+	\fancyhead[L]{\color{Black}{\footnotesize{\thetitle}}}
+	\fancyfoot{} % clear all footer fields
+	\fancyfoot[R]{\footnotesize{\bf{\thepage}}}
+	\fancyfoot[L]{\footnotesize{\bf{Progetto corso Machine Learning}}}
+	
+	
+	
+	\twocolumn
+	%------------------------------------------                                       
+	%                      Title
+	%------------------------------------------
+	[{
+		\maketitle
+		\thispagestyle{firstpage}
+		\title{\color{Black}\bf{Realizzazione di una applicazione OCR per manoscritti italiani mediante Kraken}}
+		%------------------------------------------                                                           
+		%                   Abstract
+		%------------------------------------------
+		\normalsize
+		\begin{tcolorbox}[  colback = WhiteSmoke,
+			,
+			width=\linewidth,
+			arc=1mm, auto outer arc,
+			]
+			\section*{Riassunto}
+			
+		
+		\end{tcolorbox}
+		\vspace{1.5ex}
+	}]
+	
+	
+	%------------------------------------------
+	%                   Main Matter
+	%------------------------------------------
+	
+	\section{Introduzione}
+	
+	\section{Architettura del modello}
+	
+	\section{Modello di partenza e difficoltà di documentazione}
+	
+	\section{Metodi}
+	
+	\section{Risultati sperimentali}
+	
+	\section{Conclusioni}
+	
+	
+\end{document}
