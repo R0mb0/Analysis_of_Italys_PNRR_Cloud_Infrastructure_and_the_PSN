@@ -106,6 +106,9 @@ version={4.0},
 
 \begin{document}
 	
+	%------------------------------------------------
+	% Title
+	%------------------------------------------------
 	\begin{frame}
 		\vspace*{-5mm}
 		\begin{center}
@@ -119,217 +122,268 @@ version={4.0},
 			Corso di Laurea in Informatica e Innovazione Digitale\\
 			\hspace*{10mm}\noindent\rule{110mm}{0.4pt}\newline
 			\vspace*{0.5mm}
-		Presentazione progetto programmazione per \textbf{Sistemi Distribuiti}\\
-		\vspace*{5mm}
-		\textbf{\large {Trasformazione digitale della Pubblica Amministrazione italiana: \\
-				PNRR, Polo Strategico Nazionale e Piattaforma Digitale Nazionale Dati}}
+			Presentazione progetto per \textbf{Sistemi Distribuiti}\\
+			\vspace*{5mm}
+			\textbf{\large {Trasformazione digitale della PA italiana: \\
+					PNRR, PSN e Piattaforma Digitale Nazionale Dati}}
 		\end{center}
 	\end{frame}
 	
+	%------------------------------------------------
+	% Note PDF
+	%------------------------------------------------
 	\begin{frame}
 		\centering
 		\fboxrule=2pt
 		\fbox
 		{
 			\begin{minipage}{0.9\linewidth}
-				\small{Il seguente documento è ottimizzato per la visualizzazione digitale con \href{https://get.adobe.com/it/reader/}{\textcolor{blue}{Adobe~Acrobat~Reader}}.}  
+				\small{Documento ottimizzato per la visualizzazione digitale con
+					\href{https://get.adobe.com/it/reader/}{\textcolor{blue}{Adobe~Acrobat~Reader}}.}
 			\end{minipage}
 		}
 	\end{frame}
 	
+	%------------------------------------------------
+	% TOC
+	%------------------------------------------------
 	\begin{frame}
 		\tableofcontents
 	\end{frame}
 	
+	%================================================
 	\section{Introduzione}
-	
+	%================================================
 	\begin{frame}{Introduzione}
 		\begin{itemize}
-			\item Negli ultimi anni, la digitalizzazione dei servizi pubblici è passata da una somma di iniziative locali a un percorso più coordinato a livello nazionale.
+			\item Obiettivo: capire la transizione digitale della PA (PNRR)
+			\item Tesi: \textbf{governance più centralizzata}, esecuzione \textbf{distribuita (cloud)}
+			\item Focus: \textbf{PDND} (interoperabilità) e \textbf{PSN} (infrastruttura)
 		\end{itemize}
+		\vspace{2mm}
+		
+		
 		\begin{center}
-			\zoombox{\includegraphics[scale=0.5]{ecosistema.png}}
+			\zoombox{\includegraphics[scale=0.45]{ecosistema.png}}
 		\end{center}
 	\end{frame}
 	
+	%================================================
 	\section{Prima della transizione}
+	%================================================
 	\begin{frame}{Prima della transizione}
 		\begin{itemize}
-			\item Soluzioni applicative e infrastrutturali sono nate in tempi diversi, con tecnologie diverse e con livelli di maturità differenti
-			\item Le modalità di scambio di dati e informazioni tra enti sono state spesso il risultato di accordi bilaterali e integrazioni specifiche.
-			\item la gestione della sicurezza, del monitoraggio, della continuità operativa e dell'aggiornamento infrastrutturale era risultata disomogenea.
+			\item Sistemi a \textbf{silos} (ogni ente ``fa da sé'')
+			\item Integrazioni spesso \textbf{bilaterali} (caso per caso)
+			\item Sicurezza e continuità: \textbf{molto disomogenee}
 		\end{itemize}
+		\vspace{2mm}
+		% Immagine consigliata: schema a isole / integrazioni punto-punto
+		% \includegraphics[width=0.75\linewidth]{prima_vs_dopo.png}
 	\end{frame}
 	
+	\begin{frame}{Transizione: prima vs dopo}
+		\centering
+		\begin{tabularx}{0.95\linewidth}{X X}
+			\textbf{Prima} & \textbf{Dopo (obiettivo)}\\
+			Silos e CED frammentati & Cloud + consolidamento (PSN/qualificati)\\
+			Accordi bilaterali & Regole comuni + interoperabilità (PDND)\\
+			Standard variabili & Standardizzazione + controlli\\
+		\end{tabularx}
+		\vspace{2mm}
+		
+		% Immagine consigliata: diagramma a 2 colonne o freccia evolutiva
+		% \includegraphics[width=0.8\linewidth]{before_after.png}
+	\end{frame}
+	
+	%================================================
 	\section{PNRR e governance}
+	%================================================
 	\begin{frame}{PNRR e governance}
 		\begin{itemize}
-			\item Il PNRR agisce sia come fonte di finanziamento sia come meccanismo di indirizzo: obiettivi, milestone, target e misure di controllo trasformano la digitalizzazione in un programma coordinato e monitorabile.
+			\item PNRR = \textbf{finanziamento + indirizzo} (milestone/target)
+			\item Spinta a: \textbf{cloud-first}, piattaforme nazionali, interoperabilità
+			\item Effetto: riduzione della frammentazione (ma nuovi trade-off)
 		\end{itemize}
 	\end{frame}
 	
-	\section{Il Piano Triennale 2024-2026}
-	\begin{frame}{Il Piano Triennale 2024-2026}
+	%================================================
+	\section{Piano Triennale 2024--2026}
+	%================================================
+	\begin{frame}{Piano Triennale 2024--2026}
 		\begin{itemize}
-			\item Il \emph{Piano Triennale per l’informatica nella PA 2024--2026} descrive un impianto che collega la trasformazione dei servizi alla necessità di un framework uniforme.
-			\item La \textbf{PDND} (Piattaforma Digitale Nazionale Dati) è presentata come il \emph{layer focale} per la condivisione di dati e processi tra amministrazioni, con l’obiettivo di attuare il principio \emph{once-only}.
+			\item \textbf{API-first} + principio \textbf{once-only}
+			\item Architetture a \textbf{microservizi} e riuso
+			\item Piattaforme nazionali come \textbf{abilitatori}
 		\end{itemize}
+		
+		\vspace{2mm}
+		% Immagine consigliata: schema "API-first/once-only" oppure flusso dati cittadino->PA
+		% \includegraphics[width=0.8\linewidth]{once_only.png}
 	\end{frame}
 	
+	\begin{frame}{PDND}
+		\begin{itemize}
+			\item PDND = \textbf{catalogo e-service} + accesso via API
+			\item Gestisce: \textbf{authN/authZ}, tracciamento, regole di accordo
+			\item Obiettivo: interoperabilità \textbf{scalabile} (non ``uno a uno'')
+		\end{itemize}
+		\vspace{2mm}
+		% Immagine consigliata: schema provider -> PDND -> consumer (catalogo al centro)
+		% \includegraphics[width=0.85\linewidth]{pdnd_schema.png}
+	\end{frame}
+	
+	%================================================
 	\section{Infrastrutture e cloud}
-	\begin{frame}{Infrastrutture e cloud}
+	%================================================
+	\begin{frame}{Cloud Italia: perché (in breve)}
 		\begin{itemize}
-			\item La sezione infrastrutture del Piano Triennale inquadra la strategia \textbf{Cloud Italia} come un percorso attuativo che risponde a tre sfide: autonomia tecnologica, controllo sui dati e resilienza dei servizi.
-			\item 	Il \textbf{PSN} (Polo Strategico Nazionale) viene descritto nel Piano Triennale come infrastruttura ad alta affidabilità localizzata sul territorio nazionale, promossa per la razionalizzazione e il consolidamento dei Centri di Elaborazione Dati (CED) della PA, garantendo qualità, sicurezza, scalabilità, sostenibilità economica e continuità operativa.
-			\item Il Piano richiama il \textbf{SPC} (Sistema Pubblico di Connettività) come rete e insieme di servizi di connettività che consente l’interscambio riservato di informazioni, l’interoperabilità tra reti delle amministrazioni e l’interconnessione a Internet.
+			\item \textbf{Autonomia} tecnologica e controllo dei dati
+			\item \textbf{Resilienza} e continuità dei servizi
+			\item Migrazione = occasione per ridurre \textbf{debito tecnico} e rischi
 		\end{itemize}
+		
+		\vspace{2mm}
+		% Immagine consigliata: cloud-first pipeline / migrazione (rehost->replatform->rearchitect)
+		% \includegraphics[width=0.8\linewidth]{cloud_migration.png}
 	\end{frame}
 	
-	\section{PSN 2025: servizi, sovranità, resilienza e modelli di erogazione}
-	\begin{frame}{PSN 2025: servizi, sovranità, resilienza e modelli di erogazione}
-		\begin{center}
-			\textbf{Gestione PSN (Oracle Alloy)}
-		\end{center}
+	\begin{frame}{PSN: ruolo e idea}
 		\begin{itemize}
-			\item fault domain (con ridondanza e anti-affinity),
-			\item replica storage,
-			\item replica database (Oracle RAC),
-			\item assenza di downtime programmato per maintenance,
-			\item disponibilità di più region (Nord e Sud) e possibilità di disaster recovery tra region con RPO definiti in convenzione.
+			\item PSN = infrastruttura nazionale per \textbf{consolidamento} CED
+			\item Non ``tutto su PSN'': anche \textbf{cloud qualificati} e modelli ibridi
+			\item Governance + sicurezza come valore aggiunto
 		\end{itemize}
+		
+		\vspace{2mm}
+		% Immagine consigliata: schema PSN + cloud qualificati + enti
+		% \includegraphics[width=0.85\linewidth]{psn_overview.png}
 	\end{frame}
 	
-	\subsection{Secure Public Cloud}
+	%================================================
+	\section{PSN 2025: modelli di erogazione}
+	%================================================
+	\begin{frame}{PSN 2025: modelli (1 messaggio)}
+		\begin{itemize}
+			\item PSN Managed (es. Oracle Alloy)
+			\item Secure Public Cloud (Azure/GCP con governance PSN)
+			\item Industry Standard (servizi ``di mercato'' integrati)
+		\end{itemize}
+		\vspace{2mm}
+		% Immagine consigliata: 3 blocchi (Managed / SPC / Industry)
+		% \includegraphics[width=0.9\linewidth]{psn_models.png}
+	\end{frame}
+	
+	\begin{frame}{PSN Managed: resilienza}
+		\begin{itemize}
+			\item Ridondanza su \textbf{fault domain}
+			\item Storage e DB con \textbf{replica}
+			\item Maintenance senza downtime (obiettivo)
+			\item DR inter-region: \textbf{opzionale/configurabile}
+		\end{itemize}
+		\vspace{2mm}
+		% Immagine consigliata: schema region con 3 fault domain + freccia verso region DR
+		% \includegraphics[width=0.85\linewidth]{fault_domain_dr.png}
+	\end{frame}
+	
 	\begin{frame}{Secure Public Cloud}
-		\begin{center}
-			concezione del \textbf{Secure Public Cloud} come accesso a region pubbliche di hyperscaler selezionati, con l’aggiunta di elementi di sicurezza e governance erogati dai data center PSN.
-		\end{center}
 		\begin{itemize}
-			\item gestione chiavi di crittografia esterna al controllo del cloud provider;
-			\item modello di governance e ambienti segregati standard;
-			\item controlli su traffico (hub \& spoke) e monitoraggio;
-			\item backup conservati nel perimetro PSN;
-			\item scenari di confidential computing (in particolare nella variante Confidential Azure) con meccanismi aggiuntivi di trasparenza e controllo.
+			\item \textbf{Public cloud} in Italia (hyperscaler)
+			\item \textbf{Security \& governance} nel perimetro PSN
 		\end{itemize}
+		
+		\vspace{1mm}
+		\begin{itemize}
+			\item Chiavi: controllo esterno al CSP
+			\item Rete: modello \textbf{hub \& spoke}
+			\item Backup nel perimetro PSN
+		\end{itemize}
+		
+		\vspace{2mm}
+		% Immagine consigliata: diagramma 2 blocchi (Public cloud + PSN security)
+		% \includegraphics[width=0.85\linewidth]{spc_architecture.png}
 	\end{frame}
 	
+	%================================================
 	\section{Sicurezza e gestione del rischio}
-	\begin{frame}{Sicurezza e gestione del rischio}
-		 Viene richiamata la riforma dell’architettura nazionale cyber con la nascita dell’\textbf{ACN} (Agenzia per la Cybersicurezza Nazionale), e viene indicata la necessità di:
+	%================================================
+	\begin{frame}{Sicurezza: da tecnologia a governance}
 		\begin{itemize}
-			\item modelli di gestione centralizzati della cybersicurezza;
-			\item processi di gestione e mitigazione del rischio cyber, inclusa gestione delle terze parti;
-			\item promozione della cultura cyber;
-			\item servizi e piattaforme (es. CERT) a supporto della PA.
+			\item Cybersecurity come \textbf{requisito di sistema}
+			\item Centralità di: logging, monitoraggio, audit
+			\item ACN: indirizzo e rafforzamento capacità nazionali
 		\end{itemize}
 	\end{frame}
 	
-	\section{Caso di studio operativo}
-	\begin{frame}{Caso di studio operativo}
-		Negli estratti del protocollo AGENAS relativi ai servizi Sogei, compaiono elementi tipici di una gestione ICT industrializzata:
+	\begin{frame}{Caso operativo}
 		\begin{itemize}
-			\item \textbf{Disaster recovery}: replica asincrona, verifiche semestrali e prove annuali con utenti selezionati;
-			\item \textbf{SOC (Security Operation Center)}: centralizzazione log via SIEM, monitoraggio real-time, incident response, patch management, reportistica;
-			\item \textbf{IAM (Identity and Access Management)}: gestione identità/autorizzazioni e componenti di certificazione.
+			\item Processi e certificazioni (ISO, ALM, DevOps)
+			\item \textbf{DR} con test periodici (semestrali/annuali)
+			\item \textbf{SOC} e SIEM: centralizzazione log e incident response
+			\item \textbf{IAM}: gestione identità e autorizzazioni
+		\end{itemize}
+		\vspace{2mm}
+		% Immagine consigliata: schema SOC (log -> SIEM -> alert -> IR)
+		% \includegraphics[width=0.8\linewidth]{soc_siem.png}
+	\end{frame}
+	
+	%================================================
+	\section{Centralizzazione vs Ibridazione}
+	%================================================
+	\begin{frame}{In che senso è ``più centralizzato''?}
+		\begin{itemize}
+			\item Regole comuni (governance)
+			\item Piattaforme nazionali (abilitatori)
+			\item Cataloghi, identità, auditing (punti di controllo)
 		\end{itemize}
 	\end{frame}
 	
-	\section{in che senso il modello tende alla centralizzazione?}
-	\begin{frame}{in che senso il modello tende alla centralizzazione?}
+	\begin{frame}{Perché resta ``distribuito''?}
 		\begin{itemize}
-			\item la PDND come layer nazionale di regole e catalogo per l’interoperabilità (accordi, autorizzazioni, tracciamento);
-			\item la diffusione e il consolidamento di piattaforme nazionali per identità, pagamenti, notifiche e basi dati di interesse nazionale;
-			\item il PSN come infrastruttura di riferimento per la migrazione di dati/servizi e come volano per la razionalizzazione dei CED.
+			\item Cloud: multi-region, replica, DR
+			\item Coesistenza di modelli (PSN + hyperscaler)
+			\item Obiettivo: resilienza e scalabilità
 		\end{itemize}
 	\end{frame}
 	
-	\section{Ibridazione}
-	\begin{frame}{Ibridazione}
-		\begin{itemize}
-			\item cloud e multi-region con replica e DR;
-			\item coesistenza di PSN Managed e Secure Public Cloud con hyperscaler;
-			\item possibilità di infrastrutture cloud federate della PA e concetti di edge/infrastrutture di prossimità.
-		\end{itemize}
-	\end{frame}
-	
-	\section{Concentrazione del rischio}
+	%================================================
+	\section{Rischi e trade-off}
+	%================================================
 	\begin{frame}{Concentrazione del rischio}
 		\begin{itemize}
-			\item Non è necessario che tutto stia fisicamente in un unico luogo: basta che esistano punti di controllo logico affinché un attacco ben riuscito possa avere un \emph{blast radius} maggiore
-			\item L’incentivo ad attacchi mirati aumenta.
+			\item Nodi critici = \textbf{high-value target}
+			\item Maggiore interconnessione = blast radius più alto
+			\item Serve segmentazione + controlli continui
 		\end{itemize}
 	\end{frame}
 	
-	\section{Il fattore umano}
 	\begin{frame}{Il fattore umano}
-		Questa architettura fa pensare che il fattore umano rimane l’elemento più vulnerabile.
 		\begin{itemize}
-			\item aumenta il numero di attori coinvolti (enti, fornitori, subfornitori, operatori);
-			\item aumentano i privilegi necessari per operare (gestione tenant, gestione chiavi, emergenze);
-			\item non esistono controlli stringenti su accessi amministrativi, segregazione dei compiti e audit.
+			\item Credenziali e privilegi (IAM/PAM)
+			\item Errori operativi e procedure
+			\item Social engineering e supply chain
 		\end{itemize}
 	\end{frame}
 	
-	\section{dipendenza operativa e qualità reale di un SOC}
-	\begin{frame}{dipendenza operativa e qualità reale di un SOC}
+	\begin{frame}{Dipendenza operativa}
+		\begin{itemize}
+			\item Strumenti \textbf{non bastano}: serve qualità reale
+			\item Log completi + correlazione + risposta rapida
+			\item DR efficace solo con \textbf{prove periodiche}
+		\end{itemize}
+	\end{frame}
+	
+	%------------------------------------------------
+	% Closing
+	%------------------------------------------------
+	\begin{frame}{Conclusione}
 		\begin{center}
-			\textbf{Un SOC esiste davvero quando:}
+			\Large
+			\textbf{La PA evolve verso governance centralizzata e infrastrutture distribuite:}
+			\\[2mm]
+			standardizzazione e resilienza aumentano, ma crescono anche
+			\textbf{dipendenze} e \textbf{rischi di concentrazione}.
 		\end{center}
-		\begin{itemize}
-				\item riceve log completi e corretti (non solo infrastruttura, anche applicazioni);
-			\item correla e genera alert utili (riduzione falsi positivi / falsi negativi);
-			\item ha processi di incident response e canali decisionali rapidi;
-			\item esegue esercitazioni e post-mortem che producono miglioramenti.
-		\end{itemize}
-	\end{frame}
-	
-	\section{Interoperabilità}
-	\begin{frame}{Interoperabilità}
-		La PDND introduce un catalogo e regole comuni. Tuttavia, l’interoperabilità può fallire anche se ``l’API esiste'', quando:
-		\begin{itemize}
-			\item la semantica dei dati è ambigua o incoerente tra enti;
-			\item mancano regole chiare di versioning e deprecazione;
-			\item il dato fonte cambia senza un meccanismo affidabile di notifica/aggiornamento;
-			\item i fruitori implementano cache o repliche senza governance.
-		\end{itemize}
-	\end{frame}
-	
-	\section{Resilienza e disponibilità}
-	\begin{frame}{Resilienza e disponibilità}
-		\begin{center}
-			\textbf{La resilienza promessa dal cloud e dal PSN dipende da come vengono configurati i sistemi applicativi.}
-		\end{center}
-		\begin{itemize}
-			\item un’applicazione può essere ospitata in cloud ma restare fragile (dipendenze esterne, configurazioni errate, single points of failure logici);
-			\item un piano di DR senza prove periodiche può fallire nel momento del bisogno;
-			\item la gestione dei backup può essere inefficace se non verificata (restore test, integrity, tempi).
-		\end{itemize}
-	\end{frame}
-	
-	\section{Lock-in non solo tecnologico}
-	\begin{frame}{Lock-in non solo tecnologico}
-		\begin{center}
-			\textbf{È un obiettivo realistico solo se si riconosce che il lock-in ha almeno tre componenti:}
-		\end{center}
-		\begin{itemize}
-			\item \textbf{tecnologica}: uso di servizi proprietari difficili da migrare;
-			\item \textbf{operativa}: strumenti e runbook costruiti intorno a una piattaforma;
-			\item \textbf{organizzativa}: competenze concentrate su uno stack, difficili da sostituire.
-		\end{itemize}
-	\end{frame}
-	
-	\section{Condizioni di successo}
-	\begin{frame}{Condizioni di successo}
-		\begin{center}
-			\textbf{Perché i benefici attesi siano realmente ottenuti, alcune condizioni appaiono essenziali:}
-		\end{center}
-		\begin{itemize}
-			\item \textbf{Disciplina sugli accessi}: identità e privilegi devono essere governati con rigore, audit e segregazione dei compiti.
-			\item \textbf{Osservabilità e audit end-to-end}: logging e monitoring non solo infrastrutturali ma anche applicativi, con procedure di risposta agli incidenti.
-			\item \textbf{DR verificato}: backup e disaster recovery devono essere testati periodicamente e non solo dichiarati.
-			\item \textbf{Interoperabilità come contratto}: API e e-service devono avere versioning, semantica chiara e gestione dell’evoluzione.
-			\item \textbf{Gestione fornitori}: controllo delle terze parti come parte integrante della postura di sicurezza.
-		\end{itemize}
 	\end{frame}
 	
 \end{document}
