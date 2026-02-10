@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v6
         with: 
           name: Analysis_of_Italys_PNRR_Cloud_Infrastructure_and_the_PSN_Slides
-          path: Report/Report/Slides.pdf
+          path: Report/Slides/Slides.pdf
