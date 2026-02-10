@@ -9,13 +9,23 @@ jobs:
     steps:
       - name: Download repo files
         uses: actions/checkout@v6.0.1
-      - name: Compile files
+      - name: Compile files1
         uses: xu-cheng/latex-action@v4
         with:
           working_directory: Report/Report
           root_file: Report.tex
-      - name: Upload compiled file
+      - name: Compile files2
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: Report/Slides
+          root_file: Slides.tex
+      - name: Upload compiled file1
         uses: actions/upload-artifact@v6
         with: 
           name: Analysis_of_Italys_PNRR_Cloud_Infrastructure_and_the_PSN
           path: Report/Report/Report.pdf
+      - name: Upload compiled file2
+        uses: actions/upload-artifact@v6
+        with: 
+          name: Analysis_of_Italys_PNRR_Cloud_Infrastructure_and_the_PSN_Slides
+          path: Report/Report/Slides.pdf
